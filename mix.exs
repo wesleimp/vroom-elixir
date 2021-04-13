@@ -1,13 +1,20 @@
 defmodule VROOM.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+  @source_url "https://github.com/wesleimp/vroom-elixir"
+
   def project do
     [
       app: :vroom,
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description:
+        "Implementation of VROOM (Vehicle Routing Open-Source Optimization Machine) HTTP client",
+      package: package(),
+      docs: docs()
     ]
   end
 
@@ -24,7 +31,29 @@ defmodule VROOM.MixProject do
       {:tesla, "~> 1.4"},
       {:jason, "~> 1.2"},
       {:mint, "~> 1.2"},
-      {:castore, "~> 0.1.8"}
+      {:castore, "~> 0.1.8"},
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      maintainers: ["Weslei Juan Moser Pereira"],
+      licenses: ["MIT"],
+      links: %{GitHub: @source_url}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      source_url: @source_url,
+      source_ref: "v#{@version}",
+      formatter_opts: [gfm: true],
+      extras: [
+        "README.md"
+      ]
     ]
   end
 end
