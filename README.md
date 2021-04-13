@@ -4,7 +4,7 @@ Implementation of VROOM (Vehicle Routing Open-Source Optimization Machine) HTTP 
 
 ## Install
 
-```
+```elixir
 defp deps() do
   {:vroom, "~> 0.1.0"}
 end
