@@ -1,7 +1,11 @@
 defmodule VROOM.Vehicle do
-  @moduledoc false
+  @moduledoc """
+  Defines a Vehicle Step object.
 
-  @type coordinates() :: list(Float.t())
+  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#vehicles
+  """
+
+  @type coordinates() :: list(float())
   @type t() :: %__MODULE__{
           id: integer(),
           profile: binary() | nil,

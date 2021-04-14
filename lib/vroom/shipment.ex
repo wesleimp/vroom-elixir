@@ -1,5 +1,9 @@
 defmodule VROOM.Shipment do
-  @moduledoc false
+  @moduledoc """
+  Defines a Shipment object.
+
+  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#shipments
+  """
 
   @type t() :: %__MODULE__{
           pickup: VROOM.ShipmentStep.t(),
