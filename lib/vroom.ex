@@ -10,7 +10,7 @@ defmodule VROOM do
 
   alias VROOM.{Job, Vehicles}
 
-  @vroom_url Application.get_env(:vroom, :url)
+  @vroom_url Application.compile_env!(:vroom, :url)
 
   plug(Tesla.Middleware.BaseUrl, @vroom_url)
   plug(Tesla.Middleware.Headers, [{"content-type", "application/json"}])

@@ -53,3 +53,6 @@ jobs:
 
       - name: Check format
         run: mix format --check-formatted
+
+      - name: Check credo
+        run: mix credo --strict -a

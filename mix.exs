@@ -32,7 +32,8 @@ defmodule VROOM.MixProject do
       {:jason, "~> 1.2"},
       {:mint, "~> 1.2"},
       {:castore, "~> 0.1.8"},
-      {:ex_doc, "~> 0.23", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
+      {:credo, "~> 1.5", only: [:dev]}
     ]
   end
 
