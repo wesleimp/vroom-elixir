@@ -21,6 +21,11 @@ end
 
 config :vroom, VROOM,
     url: "VROOM URL"
+
+# config/prod.exs
+
+config :vroom, VROOM,
+    url: "VROOM URL PROD"
 ```
 
 ### Example
