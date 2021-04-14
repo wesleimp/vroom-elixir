@@ -1,5 +1,9 @@
 defmodule VROOM.Job do
-  @moduledoc false
+  @moduledoc """
+  Defines a Job object.
+
+  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#jobs
+  """
 
   @type t() :: %__MODULE__{
           id: integer(),

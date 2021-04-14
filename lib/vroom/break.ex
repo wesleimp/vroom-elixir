@@ -1,5 +1,9 @@
 defmodule VROOM.Break do
-  @moduledoc false
+  @moduledoc """
+  Defines a Vehicle Break object.
+
+  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#vehicles
+  """
 
   @type t() :: %__MODULE__{
           id: integer(),

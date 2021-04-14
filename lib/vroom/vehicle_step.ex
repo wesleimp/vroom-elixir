@@ -1,5 +1,9 @@
 defmodule VROOM.VehicleStep do
-  @moduledoc false
+  @moduledoc """
+  Defines a Vehicle Step object.
+
+  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#vehicles
+  """
 
   @type t() :: %__MODULE__{
           type: binary(),

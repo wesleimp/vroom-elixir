@@ -1,7 +1,11 @@
 defmodule VROOM.ShipmentStep do
-  @moduledoc false
+  @moduledoc """
+  Defines a Shipment Step object.
 
-  @type coordinates() :: list(Float.t())
+  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#shipments
+  """
+
+  @type coordinates() :: list(float())
   @type t() :: %__MODULE__{
           id: integer(),
           description: binary() | nil,
