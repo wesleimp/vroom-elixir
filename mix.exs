@@ -1,13 +1,13 @@
 defmodule VROOM.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
   @source_url "https://github.com/wesleimp/vroom-elixir"
 
   def project do
     [
       app: :vroom,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
