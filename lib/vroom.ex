@@ -4,7 +4,7 @@ defmodule VROOM do
   Optimization Machine) HTTP client.
   """
 
-  @spec solve([Vehicles.t()], [Shipments.t()], [Job.t()], map()) :: map()
+  @spec solve([Vehicles.t()], [Shipment.t()], [Job.t()], map()) :: map()
   @doc """
   Calls the VROOM API and get the computed solution.
 
