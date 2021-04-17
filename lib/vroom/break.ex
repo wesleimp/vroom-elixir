@@ -1,18 +1,23 @@
 defmodule VROOM.Break do
   @moduledoc """
-  Defines a Vehicle Break object.
+  Defines a break during a route. A Vehicle can have many breaks.
 
-  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#vehicles
+  The Break struct has the following properties:
+
+  - `time_windows`: an list of time_window objects describing valid slots for break start;
+  - `service`: break duration (defaults to 0);
+  - `description`: a string describing a break
   """
 
   @type t() :: %__MODULE__{
           id: integer(),
           time_windows: [integer()],
           service: integer() | nil,
-          description: binary() | nil
+          description: String.t() | nil
         }
 
   @derive Jason.Encoder
+
   defstruct [
     :id,
     :time_windows,

@@ -1,8 +1,21 @@
 defmodule VROOM.Vehicle do
   @moduledoc """
-  Defines a Vehicle Step object.
+  Describes what kind of transportation type the driver is using. The default
+  profile is `car`.
 
-  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#vehicles
+  The Vehicle struct has the following properties:
+
+  - `profile`: routing profile (defaults to car)
+  - `description`: a string describing this vehicle
+  - `start`: coordinates list
+  - `start_index`: index of relevant row and column in custom matrix
+  - `end`: coordinates list
+  - `end_index`: index of relevant row and column in custom matrix
+  - `capacity`: an list of integers describing multidimensional quantities
+  - `skills`: an list of integers defining skills
+  - `time_window`: a time_window struct describing working hours
+  - `breaks`: an list of break structs
+  - `steps`: an list of vehicle_step structs describing a custom route for this vehicle (only makes sense when using -c)
   """
 
   @type coordinates() :: list(float())

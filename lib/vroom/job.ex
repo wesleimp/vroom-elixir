@@ -1,8 +1,19 @@
 defmodule VROOM.Job do
   @moduledoc """
-  Defines a Job object.
+  A Job is a description of a place to visit.
 
-  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#jobs
+  The Job struct has the folling properties:
+
+  - `id`: the job identifier;
+  - `location`: the coordinates list
+  - location_index]: index of relevant row and column in custom matrix;
+  - `service`: job service duration (defaults to 0);
+  - `amount`: an list of integers describing multidimensional quantities;
+  - `delivery`: an list of integers describing multidimensional quantities for delivery;
+  - `pickup`: an list of integers describing multidimensional quantities for pickup;
+  - `skills`: an list of integers defining mandatory skills;
+  - `priority`: an integer in the [0, 100] range describing priority level (defaults to 0);
+  - `time_windows`: an list of time_window structs describing valid slots for job service start
   """
 
   @type t() :: %__MODULE__{
@@ -19,6 +30,7 @@ defmodule VROOM.Job do
         }
 
   @derive Jason.Encoder
+
   defstruct [
     :id,
     :description,
