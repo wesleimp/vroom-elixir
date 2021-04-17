@@ -1,4 +1,4 @@
-defmodule VROOM.ShipmentStep do
+defmodule VROOM.Shipment.Step do
   @moduledoc """
   It's similar to a Job.
 

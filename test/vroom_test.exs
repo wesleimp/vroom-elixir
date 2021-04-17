@@ -1,12 +1,13 @@
 defmodule VROOMTest do
+  @moduledoc false
   use ExUnit.Case
   doctest VROOM
 
-  alias VROOM.{Shipment, ShipmentStep, Vehicle}
+  alias VROOM.{Shipment, Vehicle}
 
   @shipment_1 %Shipment{
     amount: [1],
-    pickup: %ShipmentStep{
+    pickup: %Shipment.Step{
       id: 1,
       description: "Pickup #1",
       location: [
@@ -14,7 +15,7 @@ defmodule VROOMTest do
         -25.437422762495064
       ]
     },
-    delivery: %ShipmentStep{
+    delivery: %Shipment.Step{
       id: 2,
       description: "Delivery #1",
       location: [
