@@ -1,8 +1,14 @@
 defmodule VROOM.ShipmentStep do
   @moduledoc """
-  Defines a Shipment Step object.
+  It's similar to a Job.
 
-  https://github.com/VROOM-Project/vroom/blob/master/docs/API.md#shipments
+  The ShipmentStep has the following properties:
+
+  - `description`: a string describing this step;
+  - `location`: coordinates list;
+  - `location_index`: index of relevant row and column in custom matrix;
+  - `service`: task service duration (defaults to 0);
+  - `time_windows`: an list of time_window structs describing valid slots for task service start
   """
 
   @type coordinates() :: list(float())
@@ -16,6 +22,7 @@ defmodule VROOM.ShipmentStep do
         }
 
   @derive Jason.Encoder
+
   defstruct [
     :id,
     :description,
