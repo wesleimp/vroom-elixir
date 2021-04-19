@@ -19,12 +19,12 @@ end
 ```elixir
 # config/config.exs
 
-config :vroom, VROOM,
+config :vroom,
     url: "VROOM URL"
 
 # config/prod.exs
 
-config :vroom, VROOM,
+config :vroom,
     url: "VROOM URL PROD"
 ```
 
