@@ -1,4 +1,4 @@
-defmodule VROOM.VehicleStep do
+defmodule VROOM.Vehicle.Step do
   @moduledoc """
   Defines a Vehicle Step object.
 

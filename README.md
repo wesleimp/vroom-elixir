@@ -35,7 +35,7 @@ defmodule Router do
   def solve_route do
     shipment = %VROOM.Shipment{
       amount: [1],
-      pickup: %VROOM.ShipmentStep{
+      pickup: %VROOM.Shipment.Step{
         id: 1,
         description: "Pickup #1",
         location: [
@@ -43,7 +43,7 @@ defmodule Router do
           -25.437422762495064
         ]
       },
-      delivery: %VROOM.ShipmentStep{
+      delivery: %VROOM.Shipment.Step{
         id: 2,
         description: "Delivery #1",
         location: [

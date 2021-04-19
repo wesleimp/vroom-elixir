@@ -32,7 +32,7 @@ defmodule VROOM.Vehicle do
           time_window: list() | nil,
           breaks: [VROOM.Break.t()] | nil,
           speed_factor: float(),
-          steps: [VROOM.VehicleStep.t()] | nil
+          steps: [VROOM.Vehicle.Step.t()] | nil
         }
 
   @derive Jason.Encoder
