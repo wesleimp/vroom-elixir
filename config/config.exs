@@ -2,7 +2,9 @@ use Mix.Config
 
 config :tesla, adapter: Tesla.Adapter.Mint
 
-config :vroom, url: "http://solver.vroom-project.org"
+config :vroom, VROOM.Request,
+  url: "http://solver.vroom-project.org",
+  timeout: 15000
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
