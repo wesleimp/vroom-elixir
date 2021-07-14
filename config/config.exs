@@ -1,7 +1,5 @@
 use Mix.Config
 
-config :tesla, adapter: Tesla.Adapter.Mint
-
 config :vroom,
   url: "http://solver.vroom-project.org",
   timeout: 15000

@@ -3,6 +3,8 @@ defmodule VROOM.Request do
 
   use Tesla
 
+  adapter(Tesla.Adapter.Mint, timeout: 300_000)
+
   require Logger
 
   @vroom_url Application.compile_env!(:vroom, :url)
