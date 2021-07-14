@@ -19,13 +19,13 @@ end
 ```elixir
 # config/config.exs
 
-config :vroom, VROOM.Request,
+config :vroom,
     url: "VROOM URL",
     timeout: 15000
 
 # config/prod.exs
 
-config :vroom, VROOM.Request,
+config :vroom,
     url: "VROOM URL PROD"
 ```
 

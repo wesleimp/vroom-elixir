@@ -5,11 +5,12 @@ defmodule VROOM.Request do
 
   require Logger
 
-  @vroom_config Application.compile_env(:vroom, __MODULE__)
+  @vroom_url Application.compile_env!(:vroom, :url)
+  @vroom_timeout Application.compile_env(:vroom, :timeout, 15000)
 
-  plug(Tesla.Middleware.BaseUrl, @vroom_config[:url])
+  plug(Tesla.Middleware.BaseUrl, @vroom_url)
   plug(Tesla.Middleware.Headers, [{"content-type", "application/json"}])
-  plug(Tesla.Middleware.Timeout, timeout: @vroom_config[:timeout])
+  plug(Tesla.Middleware.Timeout, timeout: @vroom_timeout)
   plug(Tesla.Middleware.FollowRedirects)
   plug(Tesla.Middleware.JSON)
   plug(Tesla.Middleware.Logger)
