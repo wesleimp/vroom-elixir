@@ -15,7 +15,6 @@ defmodule VROOM.Request do
   plug(Tesla.Middleware.Timeout, timeout: @vroom_timeout)
   plug(Tesla.Middleware.FollowRedirects)
   plug(Tesla.Middleware.JSON)
-  plug(Tesla.Middleware.Logger)
 
   def vroom(vehicles, shipments, jobs, options) do
     with request_body <- prepare_request_body(vehicles, shipments, jobs, options),
